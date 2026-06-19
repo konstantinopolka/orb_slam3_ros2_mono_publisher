@@ -19,7 +19,7 @@ MonocularSlamNode::MonocularSlamNode(ORB_SLAM3::System* pSLAM)
 
     // Image subscriber
     m_image_subscriber = this->create_subscription<ImageMsg>(
-        "/anafi/camera/image", 
+       "/camera/image_raw", 
         rclcpp::QoS(10), 
         std::bind(&MonocularSlamNode::GrabImage, this, std::placeholders::_1)
     );
