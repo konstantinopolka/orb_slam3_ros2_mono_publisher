@@ -38,6 +38,7 @@ include_directories(
   ${ORB_SLAM3_ROOT_DIR}/include/CameraModels
   ${ORB_SLAM3_ROOT_DIR}/Thirdparty/Sophus
   ${Pangolin_INCLUDE_DIRS}
+  ${cv_bridge_INCLUDE_DIRS}
 )
 
 # Mono executable
