@@ -20,6 +20,14 @@ This repository is ROS2 wrapping to use ORB_SLAM3
 $ sudo apt install ros-$ROS_DISTRO-vision-opencv && sudo apt install ros-$ROS_DISTRO-message-filters
 ```
 
+# TODO: embedded unpacking vocabulary
+# For now: just unpacking the vocabular at some point during installation 
+
+```
+# from the root of the repo
+tar -xzf vocabulary/ORBvoc.txt.tar.gz -C vocabulary/
+```
+
 ## How to build
 1. Clone repository to your ROS workspace
 ```

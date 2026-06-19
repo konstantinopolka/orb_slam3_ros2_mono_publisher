@@ -5,7 +5,7 @@
 #include <tf2_ros/transform_broadcaster.h>
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <sensor_msgs/image_encodings.hpp>
-#include <cv_bridge/cv_bridge.h>
+#include <cv_bridge/cv_bridge.hpp>
 #include "visualization_msgs/msg/marker.hpp"
 #include <nav_msgs/msg/odometry.hpp>
 
@@ -19,7 +19,7 @@ MonocularSlamNode::MonocularSlamNode(ORB_SLAM3::System* pSLAM)
 
     // Image subscriber
     m_image_subscriber = this->create_subscription<ImageMsg>(
-        "/anafi/camera/image", 
+       "/camera/image_raw", 
         rclcpp::QoS(10), 
         std::bind(&MonocularSlamNode::GrabImage, this, std::placeholders::_1)
     );
