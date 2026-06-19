@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(orbslam3_pose)
 
-# Set the PYTHONPATH to your Python site-packages path
-set(ENV{PYTHONPATH} "/opt/ros/humble/lib/python3.10/site-packages")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules)
 
